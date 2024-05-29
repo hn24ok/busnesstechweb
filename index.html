@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hrishet's E-Portfolio</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000; /* Black */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #05441a; /* Green */
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #00994d; /* Darker green on hover */
+        }
+        /* Add more styles for other sections as needed */
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        /* Add border to buttons */
+        .button-container {
+            border: 2px solid #00994d; /* Darker green */
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section) => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+        // Show the 'About Me' section by default
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('about');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Hrishet's E-portfolio</h1>
+        <p>Web Page</p>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('about')">About Me</a>
+        <a href="#" onclick="showSection('experience')">Experience</a>
+        <a href="#" onclick="showSection('skills')">Skills</a>
+        <a href="#" onclick="showSection('projects')">Projects</a>
+        <a href="#" onclick="showSection('education')">Education</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Motivated and detail-oriented 15-year-old with a passion for coding, basketball, and problem-solving. I thrive on challenges and enjoy diving into complex problems. Whether it’s debugging a Python script or strategizing on the basketball court, I approach each task with determination.</p>
+        <img src="bball.img" alt="Basketball" height="200px" width="200px">
+        <img src="python.img" alt="Python code language logo" height="200px">
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>Your work experience details.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Your technical skills.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here are my artifacts.</p>
+        <!-- Added link to Articulated XITS Project -->
+        <div class="button-container">
+            <button onclick="window.open('https://hrishetn.wixsite.com/articulated-xits', '_blank')">Website</button>
+        </div>
+        <div class="button-container">
+            <button onclick="window.open('https://drive.google.com/file/d/12DurGCUhDpx1yuynTm-n-6VVhEAhJnX7/view?usp=sharing', '_blank')">Resume</button>
+        </div>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <p>Your educational background.</p>
+    </section>
+</body>
+</html>
